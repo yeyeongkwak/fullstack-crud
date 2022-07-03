@@ -1,0 +1,21 @@
+div {
+    text-align: center;
+}
+.container {
+    margin-bottom: 50px;
+}
+.deptallbtn {
+    background-color: darkslategray;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 30px;
+}
+
+.deptInputbox {
+    margin-bottom: 30px;
+}
+.deptallspan {
+    padding-right: 15px;
+}

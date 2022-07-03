@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.deptall {
+    text-align: center;
+}
+.deptallbtn {
+    background-color: darkslategray;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.deptallspan {
+    padding-right: 15px;
+}

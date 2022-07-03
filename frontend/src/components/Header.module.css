@@ -1,0 +1,22 @@
+h2 {
+    text-align: center;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: darkslategrey;
+    list-style-type: none;
+    justify-content: space-around;
+}
+.nav-item {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-item {
+    padding: 15px;
+    cursor: pointer;
+}

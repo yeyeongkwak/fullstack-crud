@@ -1,0 +1,35 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <mapper namespace="com.wehanju.mapper.DeptMapper">
+    	<resultMap type="com.wehanju.dto.Dept" id="getDeptByDeptnoResult">
+    		<result column = "department_id" property="departmentId"/>
+    		<result column = "department_name" property="departmentName"/>
+    		<result column = "department_available" property="departmentAvailable"/>
+    	</resultMap>
+    	<select id="getAllDepts" resultMap="getDeptByDeptnoResult">
+    		select department_id, department_name, department_available from department 
+    	</select>
+    	<select id="getDeptByDeptno" resultMap="getDeptByDeptnoResult" parameterType="_int">
+    		select department_id, department_name, department_available from department where department_id = #{departmentId}
+    	</select>
+    	
+    	<insert id="insertDept" parameterType="com.wehanju.dto.Dept">
+ 			insert into department(department_id, department_name, department_available) values(#{departmentId}, #{departmentName}, #{departmentAvailable})
+ 		</insert>
+ 		<!-- <insert id="insertDepts" parameterType="map">
+ 			insert into department(department_id, department_name, department_available) values
+ 			<foreach collection="list" separator="," item="item" open="(" close=")">
+ 			#{departmentId}, #{departmentName}, #{departmentAvailable}
+ 			</foreach>
+ 		</insert> -->
+ 		<update id="updateDept" parameterType="com.wehanju.dto.Dept" >
+ 			update department set department_name= #{departmentName} where department_id = #{departmentId}
+ 		</update> 
+ 		<delete id="deleteDeptByDeptId" parameterType="_int">
+ 			delete from department where department_id = #{departmentId}
+ 		</delete>
+ 		
+ 		
+    
+    </mapper>
